@@ -17,7 +17,7 @@
       <label for="longitude">Longitude:</label>
       <input type="text" id="longitude" v-model="inputLongitude" />
     </div>
-
+    <br>
     <button @click="fetchLocationDetails">Find Location Details</button>
 
     <div v-if="foundLocation">
@@ -83,7 +83,8 @@ export default {
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
-  background-color: #f5f5f5;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

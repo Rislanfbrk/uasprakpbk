@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="game-widget">
     <h1>Game Tebak Kata</h1>
     <p v-if="!gameOver">Tebak kata ini: {{ targetWord }}</p>
     <input v-model="guess" v-if="!gameOver" type="text">
@@ -45,3 +45,21 @@ export default {
   }
 };
 </script>
+
+<style>
+body{
+  background-image: url('../assets/pxfuel.jpg');
+  background-size: cover;
+}
+
+.game-widget {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px 115px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: float;
+  margin-top: -270px;
+}
+</style>

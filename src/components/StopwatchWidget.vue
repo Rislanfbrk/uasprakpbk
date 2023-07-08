@@ -58,8 +58,11 @@ export default {
 <style scoped>
 .stopwatch-widget {
   border: 1px solid #ccc;
+  border-radius: 8px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 200px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .stopwatch-widget h2 {

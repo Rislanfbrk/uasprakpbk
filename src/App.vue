@@ -23,12 +23,16 @@ export default {
 
 <style>
 #app {
+  display: grid;
+  place-items: center;
+  height: 80vh;
   text-align: center;
 }
 
 header {
-  background: #333;
   padding: 20px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 nav ul {

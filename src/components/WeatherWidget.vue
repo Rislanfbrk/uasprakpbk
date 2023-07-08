@@ -3,7 +3,11 @@
     <h2 class="widget-title">Weather Widget</h2>
     <div class="location-input">
       <label for="location">Enter Location:</label>
+      <br>
+      <br>
       <input type="text" id="location" v-model="location" />
+      <br>
+      <br>
       <button @click="fetchWeatherData">Get Weather</button>
     </div>
     <div v-if="weatherData" class="weather-data">
@@ -48,10 +52,12 @@ export default {
 <style scoped>
 .weather-widget {
   border: 1px solid #ccc;
+  border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
-  background-color: #f2f2f2;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .widget-title {
@@ -61,6 +67,14 @@ export default {
 
 .location-input {
   margin-bottom: 10px;
+}
+
+.location-input input#location {
+  padding: 10px;
+  font-size: 20px;
+  transform: scale(1.0);
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .weather-data {
